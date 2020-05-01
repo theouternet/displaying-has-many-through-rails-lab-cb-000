@@ -1,10 +1,9 @@
-class Appointment < ActiveRecord::Base 
-  
-  belongs_to :patient 
+class Appointment < ApplicationRecord
+  belongs_to :patient
   belongs_to :doctor
-  
-    def pretty_datetime
+
+  def pretty_datetime
     self.appointment_datetime.strftime("%B %d, %Y at %k:%M")
   end
-  
-end 
+
+end
